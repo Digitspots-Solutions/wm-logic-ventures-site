@@ -1,0 +1,42 @@
+{
+  "businessName": "WM-Logic Ventures",
+  "industry": "Manufacturing",
+  "tone": "professional and confident",
+  "tagline": "Precision Manufacturing Solutions for Nigerian Industries",
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero",
+      "copy": "Welcome to WM-Logic Ventures - Your Trusted Manufacturing Partner in Lagos. We deliver precision-engineered products and solutions that power Nigerian businesses forward. Quality, reliability, and innovation are at the heart of everything we manufacture.",
+      "imagePrompt": "Modern Nigerian manufacturing facility interior with clean production lines, skilled workers in safety gear operating precision machinery, bright industrial lighting, metal fabrication equipment, professional industrial setting in Lagos, high quality professional photography, sharp focus, realistic textures",
+      "layout": "centered"
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "copy": "WM-Logic Ventures is a leading manufacturing company based in the heart of Alimosho, Lagos State. From our state-of-the-art facility at 25, Agric Road Egan, Fashola Bus Stop, Igando-Ikotun, we serve businesses across Nigeria with top-tier manufactured products and components. Our commitment to precision, quality control, and timely delivery has made us the first choice for companies seeking reliable manufacturing solutions. We combine modern manufacturing techniques with deep understanding of Nigerian market needs to deliver products that meet international standards while remaining accessible to local businesses.",
+      "imagePrompt": "Professional Nigerian manufacturing team in a well-organized factory floor, diverse group of engineers and technicians reviewing blueprints and quality control processes, modern industrial equipment in background, bright workspace, Lagos industrial setting, corporate professional photography, authentic Nigerian business environment",
+      "layout": "split"
+    },
+    {
+      "id": "services",
+      "name": "Our Manufacturing Services",
+      "copy": "Custom Manufacturing Solutions - From concept to completion, we manufacture custom products tailored to your specifications. Our experienced team works closely with clients to ensure every detail meets your requirements.\n\nPrecision Engineering - Advanced machinery and skilled technicians deliver components with exacting tolerances. We maintain strict quality control throughout the production process.\n\nBulk Production - Efficient large-scale manufacturing capabilities to meet your volume demands without compromising quality. Competitive pricing for Nigerian businesses.\n\nQuality Assurance - Every product undergoes rigorous testing and inspection. We stand behind our work with comprehensive quality guarantees.\n\nSupply Chain Management - Reliable inventory management and timely delivery across Lagos and nationwide. We understand the importance of keeping your operations running smoothly.",
+      "imagePrompt": "Collection of precision manufactured metal components and products displayed on industrial workbench, various sizes and finishes, quality inspection tools visible, professional product photography, Nigerian manufacturing facility background, sharp detail, professional lighting, industrial aesthetic",
+      "layout": "grid"
+    },
+    {
+      "id": "contact",
+      "name": "Get In Touch",
+      "copy": "Ready to discuss your manufacturing needs? Contact WM-Logic Ventures today. Whether you need a quote, want to visit our facility, or have questions about our capabilities, our team is ready to assist you. We welcome inquiries from businesses of all sizes across Nigeria.\n\nVisit our facility at 25, Agric Road Egan, Fashola Bus Stop, Igando-Ikotun, Lagos State, or reach out via phone or WhatsApp. Let's build something excellent together.",
+      "imagePrompt": "Modern Nigerian business office reception area with professional desk, comfortable seating, company branding on wall, natural lighting through windows, welcoming professional environment, Lagos corporate setting, clean contemporary design, photorealistic business interior",
+      "layout": "centered"
+    }
+  ],
+  "contact": {
+    "phone": "+234 808 419 3448",
+    "email": "info@wmlogicventures.com",
+    "address": "25, Agric Road Egan, Fashola Bus Stop, Igando-Ikotun, Lagos State",
+    "whatsapp": "https://wa.me/2348084193448"
+  }
+}
