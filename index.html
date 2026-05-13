@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WM-Logic Ventures - Precision Manufacturing Solutions for Nigerian Industries</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=Outfit:wght@300;400;500&display=swap">
+    <style>
+        :root {
+            --color-primary: #080b0d;
+            --color-accent: #f64518;
+            --color-bg: #F2EDE6;
+            --color-text: #0D1117;
+            --color-surface: #1b2234;
+            --color-secondary-accent: #91aeb7;
+            --font-display: 'Exo 2', sans-serif;
+            --font-body: 'Outfit', sans-serif;
+            --border-radius: 0px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(8, 11, 13, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 4px 4px 0 rgba(246, 69, 24, 0.3);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        nav .logo span {
+            color: var(--color-accent);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 300px;
+            height: calc(100vh - 70px);
+            background: var(--color-surface);
+            box-shadow: -4px 4px 0 rgba(246, 69, 24, 0.3);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 2rem;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .mobile-menu ul a:hover {
+            color: var(--color-accent);
+        }
+
+        #hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.pexels.com/photos/30990849/pexels-photo-30990849.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') center/cover;
+            z-index: 0;
+        }
+
+        #hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            padding: 0 2rem;
+            color: #fff;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content h1 span {
+            color: var(--color-accent);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--color-accent);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
+            border: none;
+        }
+
+        .cta-button:hover {
+            background: #d63a13;
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        section {
+            padding: 80px 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--color-primary);
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: var(--color-accent);
+            margin: 1rem auto 0;
+        }
+
+        #about {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.1s;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            box-shadow: 8px 8px 0 var(--color-accent);
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-text);
+            font-weight: 300;
+        }
+
+        #services {
+            background: var(--color-surface);
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.2s;
+        }
+
+        #services h2 {
+            color: #fff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--color-bg);
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 6px 6px 0 rgba(246, 69, 24, 0.2);
+        }
+
+        .service-card:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0 rgba(246, 69, 24, 0.3);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: var(--color-text);
+            font-weight: 300;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--color-accent);
+        }
+
+        #contact {
+            background: var(--color-primary);
+            color: #fff;
+            text-align: center;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        #contact h2 {
+            color: #fff;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-content p {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .contact-item {
+            background: var(--color-surface);
+            padding: 2rem;
+            box-shadow: 6px 6px 0 rgba(246, 69, 24, 0.3);
+        }
+
+        .contact-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+        }
+
+        .contact-item a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--color-accent);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #20ba5a;
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background: var(--color-primary);
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.95rem;
+        }
+
+        footer p {
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            section {
+                padding: 48px 1.5rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image img {
+                height: 350px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            section {
+                padding: 64px 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">WM-<span>LOGIC</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>WM-<span>LOGIC</span> VENTURES</h1>
+            <p>Welcome to WM-Logic Ventures - Your Trusted Manufacturing Partner in Lagos. We deliver precision-engineered products and solutions that power Nigerian businesses forward. Quality, reliability, and innovation are at the heart of everything we manufacture.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://images.pexels.com/photos/37198885/pexels-photo-37198885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="WM-Logic Ventures Manufacturing Team">
+            </div>
+            <div class="about-text">
+                <p>WM-Logic Ventures is a leading manufacturing company based in the heart of Alimosho, Lagos State. From our state-of-the-art facility at 25, Agric Road Egan, Fashola Bus Stop, Igando-Ikotun, we serve businesses across Nigeria with top-tier manufactured products and components.</p>
+                <p>Our commitment to precision, quality control, and timely delivery has made us the first choice for companies seeking reliable manufacturing solutions. We combine modern manufacturing techniques with deep understanding of Nigerian market needs to deliver products that meet international standards while remaining accessible to local businesses.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Manufacturing Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Custom Manufacturing Solutions</h3>
+                <p>From concept to completion, we manufacture custom products tailored to your specifications. Our experienced team works closely with clients to ensure every detail meets your requirements.</p>
+            </div>
+            <div class="service-card">
+                <h3>Precision Engineering</h3>
+                <p>Advanced machinery and skilled technicians deliver components with exacting tolerances. We maintain strict quality control throughout the production process.</p>
+            </div>
+            <div class="service-card">
+                <h3>Bulk Production</h3>
+                <p>Efficient large-scale manufacturing capabilities to meet your volume demands without compromising quality. Competitive pricing for Nigerian businesses.</p>
+            </div>
+            <div class="service-card">
+                <h3>Quality Assurance</h3>
+                <p>Every product undergoes rigorous testing and inspection. We stand behind our work with comprehensive quality guarantees.</p>
+            </div>
+            <div class="service-card">
+                <h3>Supply Chain Management</h3>
+                <p>Reliable inventory management and timely delivery across Lagos and nationwide. We understand the importance of keeping your operations running smoothly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <p>Ready to discuss your manufacturing needs? Contact WM-Logic Ventures today. Whether you need a quote, want to visit our facility, or have questions about our capabilities, our team is ready to assist you. We welcome inquiries from businesses of all sizes across Nigeria.</p>
+            <p>Visit our facility at 25, Agric Road Egan, Fashola Bus Stop, Igando-Ikotun, Lagos State, or reach out via phone or WhatsApp. Let's build something excellent together.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <a href="tel:+2348084193448">+234 808 419 3448</a>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:info@wmlogicventures.com">info@wmlogicventures.com</a>
+                </div>
+                <div class="contact-item">
+                    <h3>Address</h3>
+                    <p>25, Agric Road Egan, Fashola Bus Stop, Igando-Ikotun, Lagos State</p>
+                </div>
+            </div>
+            <a href="https://wa.me/2348084193448" class="cta-button">Message Us on WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 WM-Logic Ventures. All rights reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/2348084193448" class="whatsapp-float" target="_blank">
+        <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
