@@ -1,42 +1,42 @@
 {
-  "businessName": "WM-Logic Ventures",
-  "industry": "Manufacturing",
-  "tone": "professional and confident",
-  "tagline": "Precision Manufacturing Solutions for Nigerian Industries",
+  "businessName": "Toolan InsurTech Solutions",
+  "industry": "Fintech/Insurance Technology",
+  "tone": "professional-confident",
+  "tagline": "Simplifying Insurance Through Smart Technology",
   "sections": [
     {
       "id": "hero",
       "name": "Hero",
-      "copy": "Welcome to WM-Logic Ventures - Your Trusted Manufacturing Partner in Lagos. We deliver precision-engineered products and solutions that power Nigerian businesses forward. Quality, reliability, and innovation are at the heart of everything we manufacture.",
-      "imagePrompt": "Modern Nigerian manufacturing facility interior with clean production lines, skilled workers in safety gear operating precision machinery, bright industrial lighting, metal fabrication equipment, professional industrial setting in Lagos, high quality professional photography, sharp focus, realistic textures",
-      "layout": "centered"
+      "copy": "Toolan InsurTech Solutions - Revolutionizing Insurance in Nigeria\n\nWe leverage cutting-edge API technology to make insurance accessible, transparent, and efficient for Nigerian businesses and individuals. From seamless policy management to instant claims processing, we're building the future of digital insurance.\n\nGet Started Today",
+      "imagePrompt": "Modern Lagos skyline at golden hour with sleek glass office buildings reflecting sunlight, vibrant urban professional atmosphere, Nigerian fintech innovation, digital overlay effects suggesting connectivity and technology, professional business district, clean contemporary aesthetic, photorealistic 4K quality",
+      "layout": "split"
     },
     {
       "id": "about",
       "name": "About Us",
-      "copy": "WM-Logic Ventures is a leading manufacturing company based in the heart of Alimosho, Lagos State. From our state-of-the-art facility at 25, Agric Road Egan, Fashola Bus Stop, Igando-Ikotun, we serve businesses across Nigeria with top-tier manufactured products and components. Our commitment to precision, quality control, and timely delivery has made us the first choice for companies seeking reliable manufacturing solutions. We combine modern manufacturing techniques with deep understanding of Nigerian market needs to deliver products that meet international standards while remaining accessible to local businesses.",
-      "imagePrompt": "Professional Nigerian manufacturing team in a well-organized factory floor, diverse group of engineers and technicians reviewing blueprints and quality control processes, modern industrial equipment in background, bright workspace, Lagos industrial setting, corporate professional photography, authentic Nigerian business environment",
-      "layout": "split"
+      "copy": "Who We Are\n\nToolan InsurTech Solutions (also known as Toolan Digital Insurance Co) is a Nigerian fintech company transforming how insurance works. Founded by an experienced API Banking Engineer, we understand the technical infrastructure needed to deliver seamless financial services.\n\nWe bridge the gap between traditional insurance and modern digital expectations. Our platform integrates with existing banking systems, payment gateways, and business software to provide insurance solutions that work the way Nigerian businesses operate.\n\nOur expertise in API banking engineering means we build secure, scalable, and reliable insurance technology that protects what matters most to you and your business.",
+      "imagePrompt": "Professional Nigerian fintech team collaborating in modern Lagos office space, diverse group working on laptops and digital screens, glass conference room with city views, contemporary African business environment, natural lighting, professional attire, high-tech workspace with monitors showing data dashboards, photorealistic quality",
+      "layout": "centered"
     },
     {
       "id": "services",
-      "name": "Our Manufacturing Services",
-      "copy": "Custom Manufacturing Solutions - From concept to completion, we manufacture custom products tailored to your specifications. Our experienced team works closely with clients to ensure every detail meets your requirements.\n\nPrecision Engineering - Advanced machinery and skilled technicians deliver components with exacting tolerances. We maintain strict quality control throughout the production process.\n\nBulk Production - Efficient large-scale manufacturing capabilities to meet your volume demands without compromising quality. Competitive pricing for Nigerian businesses.\n\nQuality Assurance - Every product undergoes rigorous testing and inspection. We stand behind our work with comprehensive quality guarantees.\n\nSupply Chain Management - Reliable inventory management and timely delivery across Lagos and nationwide. We understand the importance of keeping your operations running smoothly.",
-      "imagePrompt": "Collection of precision manufactured metal components and products displayed on industrial workbench, various sizes and finishes, quality inspection tools visible, professional product photography, Nigerian manufacturing facility background, sharp detail, professional lighting, industrial aesthetic",
+      "name": "Our Solutions",
+      "copy": "Digital Insurance Products & Services\n\nAPI Insurance Integration\nSeamless integration of insurance products into your existing platforms. Our robust APIs allow banks, fintechs, and businesses to offer insurance without building infrastructure from scratch.\n\nBusiness Insurance Solutions\nComprehensive coverage for Nigerian SMEs including liability, property, and business interruption insurance. Quick quotes, instant policy issuance, and digital documentation.\n\nPersonal Insurance Products\nAffordable health, life, and asset insurance for individuals. Simple application process, transparent pricing, and mobile-first experience designed for the Nigerian market.\n\nClaims Processing Platform\nFast, transparent claims management. Track your claim status in real-time, upload documents digitally, and receive faster settlements through our automated processing system.\n\nInsurance Management Dashboard\nComplete visibility into your policies, renewals, and claims. Manage multiple insurance products from one unified platform accessible anywhere, anytime.\n\nConsultation & Advisory\nExpert guidance on insurance strategy for businesses. We help you understand your coverage needs and optimize your insurance portfolio for maximum protection and value.",
+      "imagePrompt": "Split screen composition showing insurance technology in action: one side displays a smartphone with clean insurance app interface with Nigerian naira symbols and policy details, other side shows professional Nigerian business person confidently reviewing documents in modern office, security shields and connection icons subtly integrated, professional blue and green color palette, photorealistic detail",
       "layout": "grid"
     },
     {
       "id": "contact",
       "name": "Get In Touch",
-      "copy": "Ready to discuss your manufacturing needs? Contact WM-Logic Ventures today. Whether you need a quote, want to visit our facility, or have questions about our capabilities, our team is ready to assist you. We welcome inquiries from businesses of all sizes across Nigeria.\n\nVisit our facility at 25, Agric Road Egan, Fashola Bus Stop, Igando-Ikotun, Lagos State, or reach out via phone or WhatsApp. Let's build something excellent together.",
-      "imagePrompt": "Modern Nigerian business office reception area with professional desk, comfortable seating, company branding on wall, natural lighting through windows, welcoming professional environment, Lagos corporate setting, clean contemporary design, photorealistic business interior",
-      "layout": "centered"
+      "copy": "Ready to Transform Your Insurance Experience?\n\nWhether you're a business looking for comprehensive coverage, a fintech seeking insurance API integration, or an individual exploring insurance options, we're here to help.\n\nVisit Our Office:\n25, Agric Road Egan, Fashola Bus Stop\nIgando, Ikotun\nAlimosho, Lagos State\n\nCall or WhatsApp:\n+234 808 419 3448\n\nOffice Hours:\nMonday - Friday: 9:00 AM - 5:00 PM\nSaturday: 10:00 AM - 2:00 PM\n\nWe respond to all inquiries within 24 hours.",
+      "imagePrompt": "Welcoming Nigerian fintech office reception area in Lagos, modern professional space with comfortable seating, branded wall featuring Toolan logo, receptionist at sleek desk with computer, large windows showing Lagos cityscape, professional yet approachable atmosphere, natural daylight, contemporary African office design, photorealistic quality",
+      "layout": "split"
     }
   ],
   "contact": {
     "phone": "+234 808 419 3448",
-    "email": "info@wmlogicventures.com",
-    "address": "25, Agric Road Egan, Fashola Bus Stop, Igando-Ikotun, Lagos State",
+    "email": "info@toolang.com",
+    "address": "25, Agric Road Egan, Fashola Bus Stop, Igando, Ikotun, Alimosho, Lagos State",
     "whatsapp": "https://wa.me/2348084193448"
   }
 }
